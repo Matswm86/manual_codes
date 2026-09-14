@@ -14,4 +14,4 @@ Relative small personal scripts. Two so far. More incoming.
 Also working on a  ESP32 temperature and humidity sensor for vivariums/terrariums/paludariums. 
 And a English/Norwegian to Yoda translator. 
 
-I will also expand on the MNQ_level_watch to make it a proper indicator and perhaps even a full on strategy to mimiq my real live trading strategy, in hopes of finally automating it.
+I will also expand on the MNQ_level_watch to make it a proper indicator and perhaps even a full on strategy to mimic my real live trading strategy, in hopes of finally automating it.
