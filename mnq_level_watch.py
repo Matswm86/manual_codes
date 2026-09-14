@@ -114,18 +114,22 @@ def prior_levels(bars):
             if len(session_bars) == 0:
                 continue
             end = session_bars.index[-1]
-            levels.append({
-                "name": f"{date} {session} HIGH",
-                "side": "HIGH",
-                "price": session_bars["High"].max(),
-                "end": end,
-            })
-            levels.append({
-                "name": f"{date} {session} LOW",
-                "side": "LOW",
-                "price": session_bars["Low"].min(),
-                "end": end,
-            })
+            levels.append(
+                {
+                    "name": f"{date} {session} HIGH",
+                    "side": "HIGH",
+                    "price": session_bars["High"].max(),
+                    "end": end,
+                }
+            )
+            levels.append(
+                {
+                    "name": f"{date} {session} LOW",
+                    "side": "LOW",
+                    "price": session_bars["Low"].min(),
+                    "end": end,
+                }
+            )
     return levels
 
 
@@ -180,8 +184,7 @@ def main():
 
     prices = {level["name"]: level["price"] for level in levels}
     fresh = [
-        name for name, when in touches.items()
-        if name not in known and when >= cutoff
+        name for name, when in touches.items() if name not in known and when >= cutoff
     ]
 
     save_hit_levels(touches)
